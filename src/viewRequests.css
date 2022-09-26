@@ -1,0 +1,10 @@
+.table-container{
+    display: flex;
+    justify-content: center;
+    margin: 2vmax;
+}
+.active{
+    
+    cursor: not-allowed;
+    pointer-events: none;
+}

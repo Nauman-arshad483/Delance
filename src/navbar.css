@@ -1,0 +1,9 @@
+.navi{
+   display: flex;
+   height: 10vh;
+   flex-grow: 1;
+   align-items: center;
+}
+.item{
+    margin-left: 1vmax;
+}

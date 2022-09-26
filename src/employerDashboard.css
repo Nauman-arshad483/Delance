@@ -1,0 +1,25 @@
+.emp_dashboard{
+display: flex;
+justify-content: center;
+
+}
+.section{
+    display: flex;
+    background-color: antiquewhite;
+   
+    justify-content: center;
+}
+.dashboard{
+    display: flex;
+    background-color: aquamarine;
+    border-radius: 2vmax;
+    margin: 1vmax;
+    
+}
+.dashboard_options{
+    display: flex;
+    background-color: lightgreen;
+    border: 2px solid black;
+    margin: 1vmax;
+
+}
