@@ -34,21 +34,19 @@ const FreelancerDashboard = () => {
         console.log(error);
       });
 
-      view_Requests()
+    view_Requests()
       .then((res) => {
         setRequestArray(res);
       })
       .catch((error) => {
         console.log(error);
       });
-
   }, []);
 
-const run2 = (e) => {
+  const run2 = (e) => {
     e.preventDefault();
     console.log("harry");
     setShowRequest(true);
-  
   };
   const createRequest = () => {
     create_request(title, amount);

@@ -33,13 +33,13 @@ contract Delance{
     {
         return employer;
     }
-    //  function withdraw () external
-    //  {
-    //      require(msg.sender==employer,"");
-    //          //freelancer.transfer(address(this))
+      function withdraw () external
+      {
+          require(msg.sender==employer,"");
+          freelancer.transfer(address(this))
          
 
-    //  }
+      }
     receive() external payable{
         price+=msg.value;
     }

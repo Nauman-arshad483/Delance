@@ -5,14 +5,14 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import "./employerDashboard.css";
 import CreateContract from "./createContract";
-import ViewRequests from "./viewRequests"
+import ViewRequests from "./viewRequests";
 import { Navigate, useNavigate } from "react-router-dom";
 import { connectMetamask, getBalance, view_Requests } from "./features";
 
 const EmployerDashboard = () => {
   const [showContractForm, setShowContractForm] = useState(false);
   const [showRequests, setShowRequests] = useState(false);
-  const [requestArray,setRequestArray]=useState([]);
+  const [requestArray, setRequestArray] = useState([]);
 
   const navigate = useNavigate();
   const run = () => {
@@ -21,17 +21,17 @@ const EmployerDashboard = () => {
   };
   const run1 = () => {
     navigate("/Employer/Requests");
-   
-    view_Requests().then((res)=>{
-      setRequestArray(res);
-    }).catch((error)=>{
-      console.log(error);
-    })
+
+    view_Requests()
+      .then((res) => {
+        setRequestArray(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     setShowRequests(true);
-;
-    
   };
-  
+
   useEffect(() => {
     connectMetamask();
     getBalance();
@@ -54,7 +54,6 @@ const EmployerDashboard = () => {
               <Button variant="light" onClick={run1}>
                 View Requests
               </Button>{" "}
-              
             </Col>
           </Row>
         </Container>
@@ -63,7 +62,9 @@ const EmployerDashboard = () => {
         {showContractForm && <CreateContract />}
       </div>
       <div className="requests">
-        {showRequests && requestArray.length > 0  && <ViewRequests requestArray={requestArray} />}
+        {showRequests && requestArray.length > 0 && (
+          <ViewRequests requestArray={requestArray} />
+        )}
       </div>
     </Fragment>
   );

@@ -1,34 +1,32 @@
-.deadline{
-    border-radius: 1vmax;
-    background-color: darkgray;
-    padding: 1vmax;
-
+.deadline {
+  border-radius: 1vmax;
+  background-color: darkgray;
+  padding: 1vmax;
 }
-.budget{
-    border-radius: 1vmax;
-    padding: 1vmax;
-background-color: darkgray;
+.budget {
+  border-radius: 1vmax;
+  padding: 1vmax;
+  background-color: darkgray;
 }
-.body{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.project-details{
-display:flex;
-flex-direction:column;
-justify-content: center;
-align-items: center;
-margin: 2vmax;
-
+.project-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2vmax;
 }
-.deliver-work{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 2vmax;
+.deliver-work {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2vmax;
 }
-.vr_button{
-    margin-left: 1vmax;
+.vr_button {
+  margin-left: 1vmax;
 }

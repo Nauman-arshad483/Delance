@@ -25,7 +25,7 @@ export async function getBalance() {
 export async function getAssignedProjectDetails() {
   deadline = await project_details.getDeadline();
   price = await project_details.getPrice();
-  let eth_price=ethers.utils.formatEther(price)
+  let eth_price = ethers.utils.formatEther(price);
   return { deadline, eth_price };
 }
 export async function view_Requests() {
@@ -34,24 +34,24 @@ export async function view_Requests() {
 }
 export async function create_request(title, price) {
   const StageChange = project_details.connect(signer);
-  const dum=await StageChange.createRequest(title,price);
+  const dum = await StageChange.createRequest(title, price);
   return dum;
 }
 export async function Unlock_request(index) {
-  console.log("unlock")
+  console.log("unlock");
   const StageChange = project_details.connect(signer);
-  const dum=await StageChange.unlockRequest(index);
+  const dum = await StageChange.unlockRequest(index);
   return dum;
 }
 export async function withdraw() {
-  console.log("withdraw ")
+  console.log("withdraw ");
   const StageChange = project_details.connect(signer);
-  const dum=await StageChange.withdraw();
+  const dum = await StageChange.withdraw();
   return dum;
 }
 export async function pay_request(index) {
-  console.log("pay ")
+  console.log("pay ");
   const StageChange = project_details.connect(signer);
-  const dum=await StageChange.payRequest(index);
+  const dum = await StageChange.payRequest(index);
   return dum;
 }
